@@ -1,0 +1,55 @@
+-keep class androidx.core.app.CoreComponentFactory { <init>(); }
+-keep class mit.alibaba.nuidemo.ChatActivity { <init>(); }
+-keep class mit.alibaba.nuidemo.FileTranscriberActivity { <init>(); }
+-keep class mit.alibaba.nuidemo.LocalSpeechRecognizerActivity { <init>(); }
+-keep class mit.alibaba.nuidemo.MainActivity { <init>(); }
+-keep class mit.alibaba.nuidemo.MainApplication { <init>(); }
+-keep class mit.alibaba.nuidemo.SpeechRecognizerActivity { <init>(); }
+-keep class mit.alibaba.nuidemo.SpeechRecognizerNewActivity { <init>(); }
+-keep class mit.alibaba.nuidemo.SpeechTranscriberActivity { <init>(); }
+-keep class mit.alibaba.nuidemo.SpeechTranscriberNewActivity { <init>(); }
+-keep class mit.alibaba.nuidemo.TtsBasicActivity { <init>(); }
+-keep class mit.alibaba.nuidemo.TtsLocalActivity { <init>(); }
+-keep class mit.alibaba.nuidemo.WakeupAndSpeechRecognizerActivity { <init>(); }
+-keep class android.support.v4.view.ViewPager { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class android.widget.Space { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.app.AlertController$RecycleListView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.view.menu.ActionMenuItemView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.view.menu.ExpandedMenuView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.view.menu.ListMenuItemView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.widget.ActionBarContainer { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.widget.ActionBarContextView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.widget.ActionBarOverlayLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.widget.ActionMenuView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.widget.ActivityChooserView$InnerLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.widget.AlertDialogLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.widget.ButtonBarLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.widget.ContentFrameLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.widget.DialogTitle { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.widget.FitWindowsFrameLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.widget.FitWindowsLinearLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.widget.SearchView$SearchAutoComplete { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.widget.Toolbar { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.widget.ViewStubCompat { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.core.widget.NestedScrollView { <init>(android.content.Context, android.util.AttributeSet); }
+

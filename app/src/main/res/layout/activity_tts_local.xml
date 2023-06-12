@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/layout_top"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/layout_fun"
+        android:layout_alignParentTop="true" >
+
+        <TextView
+            android:id="@+id/tts_text_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:text="输入合成内容:" />
+
+        <TextView
+            android:id="@+id/tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tts_text_tip"
+            android:text="（）" />
+
+        <EditText
+            android:id="@+id/tts_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tts_text_tip"
+            android:gravity="top"
+            android:padding="8dp"
+            android:scrollbars="vertical"
+            android:textSize="12sp" />
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/layout_fun"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/layout_params"
+        android:layout_margin="5dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/tts_start_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="合成" />
+
+        <Button
+            android:id="@+id/tts_pause_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="暂停" />
+
+        <Button
+            android:id="@+id/tts_resume_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="恢复" />
+
+        <Button
+            android:id="@+id/tts_cancel_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="取消" />
+        <Button
+            android:id="@+id/tts_quit_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="退出" />
+
+        <Button
+            android:id="@+id/tts_clear_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="清除" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_params"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/layout_bottom"
+        android:layout_margin="5dp"
+        android:orientation="horizontal" >
+        <Spinner
+            android:id="@+id/tts_set_font_spin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:prompt="@string/tts_font"
+            android:spinnerMode="dialog" />
+
+        <Spinner
+            android:id="@+id/tts_set_pitch_spin"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:spinnerMode="dialog"
+            android:layout_height="wrap_content"
+            android:prompt="@string/tts_pitch" />
+
+        <Spinner
+            android:id="@+id/tts_set_speed_spin"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:spinnerMode="dialog"
+            android:layout_height="wrap_content"
+            android:prompt="@string/tts_speed" />
+
+        <Spinner
+            android:id="@+id/tts_set_volume_spin"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:spinnerMode="dialog"
+            android:layout_height="wrap_content"
+            android:prompt="@string/tts_volume" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/layout_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentBottom="true"
+        android:layout_margin="5dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/tts_batch_process"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="批量合成" />
+    </LinearLayout>
+</RelativeLayout>

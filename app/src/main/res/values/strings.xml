@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">NuiSdkDemo</string>
+    <string name="tts_font">说话人</string>
+    <string name="tts_speed">语速</string>
+    <string name="tts_volume">音量</string>
+    <string name="tts_pitch">语调</string>
+</resources>

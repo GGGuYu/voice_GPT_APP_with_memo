@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="mit.alibaba.nuidemo"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="26" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application
+        android:name="mit.alibaba.nuidemo.MainApplication"
+        android:allowBackup="true"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="mit.alibaba.nuidemo.SpeechRecognizerActivity"
+            android:label="一句话识别" />
+        <activity
+            android:name="mit.alibaba.nuidemo.SpeechRecognizerNewActivity"
+            android:label="一句话识别独立接口样例" />
+        <activity
+            android:name="mit.alibaba.nuidemo.WakeupAndSpeechRecognizerActivity"
+            android:label="唤醒识别" />
+        <activity
+            android:name="mit.alibaba.nuidemo.SpeechTranscriberActivity"
+            android:label="实时转写" />
+        <activity
+            android:name="mit.alibaba.nuidemo.SpeechTranscriberNewActivity"
+            android:label="实时转写独立接口样例" />
+        <activity
+            android:name="mit.alibaba.nuidemo.TtsBasicActivity"
+            android:label="在线语音合成" />
+        <activity
+            android:name="mit.alibaba.nuidemo.TtsLocalActivity"
+            android:label="离线语音合成" />
+        <activity
+            android:name="mit.alibaba.nuidemo.FileTranscriberActivity"
+            android:label="录音文件转写" />
+        <activity
+            android:name="mit.alibaba.nuidemo.LocalSpeechRecognizerActivity"
+            android:label="本地一句话识别" />
+        <activity
+            android:name="mit.alibaba.nuidemo.ChatActivity"
+            android:label="聊天" />
+        <activity
+            android:name="mit.alibaba.nuidemo.MainActivity"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

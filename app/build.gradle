@@ -1,0 +1,86 @@
+apply plugin: 'com.android.application'
+
+def getGitRevision() {
+    return "git rev-parse --short HEAD".execute().text.trim()
+}
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "mit.alibaba.nuidemo"
+        minSdkVersion 14
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        ndk {
+            abiFilters "armeabi-v7a", "arm64-v8a", "x86", "x86_64"
+        }
+
+        // 给gradle.properties中的LATEST_COMMIT_ID赋值
+        GIT_COMMIT_ID = getGitRevision()
+        DEMO_VERSION = "V2.5.14-1.2.1"
+        // Java代码调用
+        buildConfigField "String", "gitVersionId", "\"${DEMO_VERSION}  ${GIT_COMMIT_ID}\""
+    }
+    signingConfigs {
+        releaseConfig {
+            if (file('../keystore.props.file').exists()) {
+                def Properties keyProps = new Properties()
+                keyProps.load(new FileInputStream(file('../keystore.props.file')))
+                storeFile file(keyProps['RELEASE_STORE_FILE'])
+                storePassword keyProps['RELEASE_STORE_PASSWORD']
+                keyAlias keyProps['RELEASE_KEY_ALIAS']
+                keyPassword keyProps['RELEASE_KEY_PASSWORD']
+            }
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    lintOptions {
+        abortOnError false
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.releaseConfig
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            proguardFiles getDefaultProguardFile('proguard-android.txt')
+//            storeFile file("../../your_keystore_name.jks") // 指定密钥库路径
+//            storePassword "as1234567" // 输入密钥库密码
+//            keyAlias "as1234567" // 指定别名
+//            keyPassword "as1234567" // 输入别名密码
+        }
+    }
+    productFlavors {
+    }
+    buildToolsVersion '28.0.3'
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support'
+    })
+    implementation 'com.android.support:appcompat-v7:28.0.1'
+    implementation 'ai.api:libai:1.6.12'
+    implementation 'com.squareup.okhttp3:okhttp:4.9.1'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.google.code.gson:gson:2.8.9'
+    implementation files('libs/fastjson-1.1.46.android.jar')
+    testImplementation 'junit:junit:4.12'
+    implementation files ('libs/nuisdk-release.aar')
+//    implementation project(':nuisdk')
+}

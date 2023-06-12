@@ -1,0 +1,2 @@
+include ':app', ':nuisdk', ':nuisdk'
+rootProject.name='NuiSdkDemo'
