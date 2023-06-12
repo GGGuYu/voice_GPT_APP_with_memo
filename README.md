@@ -14,4 +14,4 @@
 
 里面的所有试用的openaikey都要过期了，所以您务必要更换。
 
-![pic1](.\pic1.png)
+![pic1](pic1.png)
