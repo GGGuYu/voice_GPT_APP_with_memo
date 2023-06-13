@@ -97,9 +97,9 @@ public class ChatActivity extends AppCompatActivity implements INativeNuiCallbac
     private String AliAPPKey = "";//填写您自己的
 
     private String AliToken = "";
-    private String OpenAIKey = "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";//作者的 要过期了 三个都要过期了,请您更换自己的
-//    private String OpenAIKey = "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";//
-//      private String OpenAIKey = "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";//萌
+    private String OpenAIKey = "";//作者的 要过期了 三个都要过期了,请您更换自己的
+//    private String OpenAIKey = "";//
+//      private String OpenAIKey = "";//萌
     private Button buttonStore;
     NativeNui nui_tts_instance = new NativeNui(Constants.ModeType.MODE_TTS);
     final static String CN_PREVIEW ="";

@@ -14,4 +14,6 @@
 
 里面的所有试用的openaikey都要过期了，所以您务必要更换。
 
-![pic1](pic1.png)
+![](pic1.png)
+
+演示视频【长期记忆版中文语音gpt手机端】 https://www.bilibili.com/video/BV1ah4y1977k/?share_source=copy_web&vd_source=e873459404f71c2ef697805a52452c7e
